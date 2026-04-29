@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, BarChart3 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTracking } from '@/hooks/useTracking';
 
 const navLinks = [
   { href: "#home", label: "Início" },
@@ -12,6 +13,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const track = useTracking();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,15 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleDownloadDesktop = () => {
+    track.addDownload('navbar_desktop');
+  };
+
+  const handleDownloadMobile = () => {
+    track.addDownload('navbar_mobile');
+    setIsOpen(false);
+  };
 
   return (
     <motion.nav
@@ -55,6 +66,16 @@ const Navbar = () => {
               className="px-6 py-2 hero-gradient rounded-lg font-semibold text-primary-foreground button-glow"
             >
               Contratar
+            </a>
+             <a
+              href="/assets/Currículo Atualizado-1.pdf"
+              download="Currículo Atualizado-1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleDownloadDesktop}
+              className="px-6 py-2 hero-gradient rounded-lg font-semibold text-primary-foreground button-glow"
+            >
+              Download Currículo
             </a>
           </div>
 
@@ -94,6 +115,14 @@ const Navbar = () => {
               >
                 Contratar
               </a>
+              <a
+                href="/assets/Currículo Atualizado-1.pdf"
+                download="Currículo Atualizado-1.pdf"
+                onClick={handleDownloadMobile}
+                className="px-6 py-3 hero-gradient rounded-lg font-semibold text-primary-foreground text-center button-glow mt-2"
+              >
+                Download Currículo
+              </a>
             </div>
           </motion.div>
         )}
@@ -103,3 +132,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
