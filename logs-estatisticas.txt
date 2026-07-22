@@ -1,6 +1,0 @@
-# Logs Estatísticas Portfolio
-Arquivo persistente de visitas/downloads.
-Atualize manualmente ou use export do dashboard.
-
-Data início: $(date)
-
