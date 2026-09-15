@@ -30,7 +30,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/bruno-ferreira-vieira/"
+              href="https://www.linkedin.com/in/bruno-vieira-ferreira?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-muted transition-colors text-muted-foreground hover:text-primary"
