@@ -76,7 +76,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/bruno-ferreira-vieira/",
+      href: "https://www.linkedin.com/in/bruno-vieira-ferreira?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
   ];
 
