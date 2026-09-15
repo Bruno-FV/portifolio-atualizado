@@ -68,8 +68,8 @@ const Navbar = () => {
               Contratar
             </a>
              <a
-              href="/assets/Curriculo_Bruno_Ferreira_Vieira.pdf"
-              download="Curriculo_Bruno_Ferreira_Vieira.pdf"
+              href="/assets/curriculoBFV.pdf"
+              download="curriculoBFV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleDownloadDesktop}
@@ -116,8 +116,8 @@ const Navbar = () => {
                 Contratar
               </a>
               <a
-                href="/assets/Curriculo_Bruno_Ferreira_Vieira.pdf"
-                download="Curriculo_Bruno_Ferreira_Vieira.pdf"
+                href="/assets/curriculoBFV.pdf"
+                download="curriculoBFV.pdf"
                 onClick={handleDownloadMobile}
                 className="px-6 py-3 hero-gradient rounded-lg font-semibold text-primary-foreground text-center button-glow mt-2"
               >
